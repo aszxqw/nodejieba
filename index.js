@@ -23,6 +23,12 @@ nodejieba.load = function (dictJson) {
   stopWordDict = dictJson.stopWordDict || nodejieba.DEFAULT_STOP_WORD_DICT;
 
   isDictLoaded = true;
+
+  nodejieba.CURRENT_DICT = dict;
+  nodejieba.CURRENT_HMM_DICT = hmmDict;
+  nodejieba.CURRENT_USER_DICT = userDict;
+  nodejieba.CURRENT_IDF_DICT = idfDict;
+  nodejieba.CURRENT_STOP_WORD_DICT = stopWordDict;
   return someFunct.call(this, dict, hmmDict, userDict, idfDict, stopWordDict);
 }
 
